@@ -4,7 +4,7 @@
 # Ritual App Analytics Documentation
 Below, I'll describe the technologies I have used, the problems I've encountered, and issues related to the task.
 
-# Aproache For Big Data(Streaming or Batch)
+# Aproach For Big Data(Streaming or Batch)
 For streaming, Spark Streaming is a viable option. To optimize the code, we could add a checkpoint mechanism, create meaningful partitions, and incorporate a logging system, among other improvements. The choice between using a Data Lake (such as partitioned Parquet files) and a Data Warehouse depends on the intended use of the data. Additionally, incorporating a session_id in the front-end would lead to clearer and more meaningful data capture. If the budget is constrained and real-time tracking of user behavior is not a priority, batch processing could be a cost-effective alternative.
  
 
