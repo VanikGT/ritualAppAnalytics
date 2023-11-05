@@ -1,3 +1,6 @@
+![62b839a4fb8d63e9b6c9251d_Ritual logo](https://github.com/VanikGT/ritualAppAnalytics/assets/25959733/f6d08cce-6aec-4dea-b548-36966bfbdf91)
+
+
 # Ritual App Analytics Documentation
 Below, I'll describe the technologies I have used, the problems I've encountered, and issues related to the task.
 
