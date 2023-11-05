@@ -1,6 +1,10 @@
 # Ritual App Analytics Documentation
 Below, I'll describe the technologies I have used, the problems I've encountered, and issues related to the task.
 
+# Aproache For Big Data(Streaming or Batch)
+For streaming, Spark Streaming is a viable option. To optimize the code, we could add a checkpoint mechanism, create meaningful partitions, and incorporate a logging system, among other improvements. The choice between using a Data Lake (such as partitioned Parquet files) and a Data Warehouse depends on the intended use of the data. Additionally, incorporating a session_id in the front-end would lead to clearer and more meaningful data capture. If the budget is constrained and real-time tracking of user behavior is not a priority, batch processing could be a cost-effective alternative.
+ 
+
 # Technologies:
 I have utilized Spark Scala for data cleaning, addressing any missing or anomalous values. Additionally, I have performed some analytics, although all tasks could also be completed using pure SQL. There's no significant difference for me between PySpark and Spark Scala. In conclusion, I have exported the datasets to the 'out' folder as CSV files. Then, I manually uploaded them into BigQuery tables. The manual upload ensures that you can run the code yourself without any credential issues.
 
