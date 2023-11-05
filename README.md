@@ -1,12 +1,11 @@
 # Ritual App Analytics Documentation
-Below I'll describe the tecnologies I haves used, the probelems I Have found out and issues regarding to the task.
+Below, I'll describe the technologies I have used, the problems I've encountered, and issues related to the task.
 
 # Technologies:
-I have used Spark Scala(Also cloud be PySpar if requeired, no difference for me) for data cleaning, handling any missing or anomalous values.Also I have calculated some analytics, though all the staff could be done with pure sql.
-In the end I have exported the datasets into out folder as csv files. Then manually uploaded them into bigquery tables. I have uploaded manually so you can run the code yourself and don't have ant credential issues.
+I have utilized Spark Scala for data cleaning, addressing any missing or anomalous values. Additionally, I have performed some analytics, although all tasks could also be completed using pure SQL. There's no significant difference for me between PySpark and Spark Scala. In conclusion, I have exported the datasets to the 'out' folder as CSV files. Then, I manually uploaded them into BigQuery tables. The manual upload ensures that you can run the code yourself without any credential issues.
 
 # Visualization
-I have used Looker Studio for Visualization purposes. I have connected Looker with bigquery:
+I have used Looker Studio for visualization purposes. I have connected Looker with bigquery:
 ```
 SELECT
   *,
@@ -30,4 +29,13 @@ JOIN
 USING
   (user_id)
 ```
-The remaining staff was done in Looker. [Here is the link to Report.](https://lookerstudio.google.com/reporting/d67e77e1-1345-4b59-8c1a-4ddac5e21a28)
+The remaining work was carried out in Looker. [Here is the link to Report.](https://lookerstudio.google.com/reporting/d67e77e1-1345-4b59-8c1a-4ddac5e21a28)
+
+# Problems
+There are some anomalous values, such as instances where the signup_date is later than the event_date; I have filtered these out along with any duplicates. Since there were no significant spikes or drop-offs in the data, I have included only the code for calculating these metrics without generating a corresponding chart.
+
+The task was executed using Spark Scala, but it could also be accomplished with PySpark if needed(even with pure pandas due to the current data size). However, due to the small size of the dataset, it's challenging to investigate anomalous cases or focus on code optimization. Ideally, the output datasets should be written to a data lake or directly into database tables rather than CSV files. Additionally, the partitioning technique applied during the write process is currently hardcoded to a single partition; for larger datasets, this logic would need to be revised based on the size of the data and other factors. Overall, the task leaned more towards data analytics than data engineering.
+
+Tehniques, suggestions and other staff we can discuss during interview!
+
+Thank You)
